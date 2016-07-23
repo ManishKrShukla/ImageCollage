@@ -1,0 +1,34 @@
+<h3 class="text-center"> Picturama</h3>
+
+<br />
+
+{{#draggable-object-target action="dragResult" resultText='Drag is Complete' dragOverAction='draggingOverTarget' dragOutAction='leftDragTarget' overrideClass='dropTarget' }}
+  <h4 class="text-center"> Drop here, prop here</h4>
+
+  <div class="dropper col-xs-12 well">
+    {{#each collage as |file index|}}
+      {{#collage-image imageUrl=file.imageUrl counter=index}} {{/collage-image}}
+    {{/each}}
+  </div>
+{{/draggable-object-target}}
+
+<div class="row gallery-strip">
+  <div class="col-xs-10">
+    {{#perfect-scroll suppressScrollY=true useKeyboard=true}}
+      <ul class="list-images">
+        {{#each model.files as |file index|}}
+          <li>
+            {{#draggable-object content=file overrideClass='dragObject'}}
+              <div class="image-container"><img src="{{file.url}}" height="200" width="300"></div>
+            {{/draggable-object}}
+          </li>
+        {{/each}}
+      </ul>
+    {{/perfect-scroll}}
+  </div>
+
+  <div class="col-xs-2">
+    {{drop-zone url='http://localhost:3000/upload' success=fileUploaded previewsContainer=false}}
+  </div>
+
+</div>

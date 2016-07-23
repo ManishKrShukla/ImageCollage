@@ -1,0 +1,99 @@
+.gallery-strip {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+.image-container {
+  display: inline-block;
+}
+.list-images {
+  list-style: none;
+}
+.list-images li {
+  display: table-cell;
+}
+.ps-container {
+  position: relative;
+  height: 100%;
+}
+.dropper {
+  height: 500px;
+}
+.ui-wrapper {
+  width: auto;
+  height: auto;
+}
+.img-container {
+  max-width: 500px;
+  display: table;
+}
+.target-image {
+  float: left;
+  height: 300px;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  width: 300px;
+  padding: 10px;
+}
+.draggable-container {
+  float: left;
+  width: auto !important;
+}
+.selected-div {
+  border: 2px solid #2f1f1f;
+}
+.ui-resizable .nwgrip, .ui-resizable .negrip, .ui-resizable .swgrip, .ui-resizable .segrip, .ui-resizable .ngrip, .ui-resizable .egrip, .ui-resizable .sgrip, .ui-resizable .wgrip {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.ui-resizable .nwgrip {
+  left: -5px;
+  top: -5px;
+}
+.ui-resizable .negrip {
+  top: -5px;
+  right: -5px;
+}
+.ui-resizable .swgrip {
+  bottom: -5px;
+  left: -5px;
+}
+.ui-resizable .segrip {
+  bottom: -5px;
+  right: -5px;
+}
+.ui-resizable .ngrip {
+  top: -5px;
+  left: 50%;
+}
+.ui-resizable .sgrip {
+  bottom: -5px;
+  left: 50%;
+}
+.ui-resizable .wgrip {
+  left: -5px;
+  top: 50%;
+}
+.ui-resizable .egrip {
+  right: -5px;
+  top: 50%;
+}
+.target-image {
+  border: 1px solid #14b1a4;
+}
+
+.ui-draggable-disabled > .target-image {
+  border: none !important;
+}
+
+.rotation-handle {
+  position: absolute;
+  top: -30px;
+  margin-left: auto;
+  left: 6px;
+  margin-right: auto;
+  right: 0px;
+  text-align: center;
+}
